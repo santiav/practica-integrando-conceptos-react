@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ProductDetails from './pages/ProductDetails'
 import Products from './pages/Products'
 import Layout from './pages/Layout'
+import AgregarProducto from './pages/AgregarProducto'
 
 function App() {
 
@@ -16,6 +17,10 @@ function App() {
                 path:'products/:id',
                 element: <ProductDetails />
             },
+            {
+              path:'add',
+              element: <AgregarProducto />
+          },
             {
               // path:'products',
               index: true,
