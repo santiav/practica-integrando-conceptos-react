@@ -8,16 +8,15 @@ import { useSelector } from "react-redux";
 // Agregar botón para que luego sea el link hacia un formulario para agregar el producto
 
 function Products() {
-
-    const products = useSelector(state => state.products)
+  const products = useSelector((state) => state.products);
 
   return (
-    <div>
+    <div className="container">
       <h1>Lista de productos:</h1>
       <Link to="/add">Agregar</Link>
-      <ul>
+      <ul className="row p-0">
         {products.map((producto, index) => (
-          <li key={index}>
+          <li key={index} className="col list-unstyled">
             <img
               src={producto.imageUrl}
               alt={producto.name}
